@@ -13,13 +13,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 from pathlib import Path
 
-import environ
 
-env = environ.Env(
-    # set casting, default value
-    DEBUG=(bool, False)
-    , )
-environ.Env.read_env() 
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -36,7 +30,8 @@ SECRET_KEY = 'q&9o*#pas-)7qc_vlsqlj5bk9sq6qt@9kwc8&&c)8hjo3u+$-z'
 DEBUG = True
 
 ALLOWED_HOSTS = ['myfinalproject-1--spicyc.repl.co', 'myfinalproject-1--spicyc.repl.co',
-'mxmapp--spicyc.repl.co']
+'mxmapp--spicyc.repl.co','mxmapp--mikeabraha.repl.co', 'mxmapp--brandilove.repl.co',]
+
 
 
 # Application definition
@@ -50,7 +45,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Third-party
-    'debug_toolbar',
     'django_extensions',
 
     # Project-specific
