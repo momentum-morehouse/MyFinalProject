@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+from pathlib import Path
+
+
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +29,9 @@ SECRET_KEY = 'q&9o*#pas-)7qc_vlsqlj5bk9sq6qt@9kwc8&&c)8hjo3u+$-z'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['myfinalproject-1--spicyc.repl.co', 'myfinalproject-1--spicyc.repl.co']
+ALLOWED_HOSTS = ['myfinalproject-1--spicyc.repl.co', 'myfinalproject-1--spicyc.repl.co',
+'mxmapp--spicyc.repl.co','mxmapp--mikeabraha.repl.co', 'mxmapp--brandilove.repl.co',]
+
 
 
 # Application definition
@@ -37,7 +43,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Third-party
+    'django_extensions',
+
+    # Project-specific
+    'myapp',
+
 ]
+
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
